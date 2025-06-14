@@ -7,12 +7,13 @@ const BlogPreview = () => {
   const handleToggle = () => {
     setShowDetails(prev => !prev);
     if (!showDetails) {
-      // सिर्फ तब scroll करें जब हम दिखा रहे हों
       setTimeout(() => {
         detailsRef.current?.scrollIntoView({ behavior: 'smooth' });
       }, 50);
     }
   };
+
+  const placeholderImg = "https://www.quickhelp.lk/wp-content/uploads/2023/08/image-removebg-preview-1.png";
 
   return (
     <section className="bg-white dark:bg-gray-900 py-12 px-4 transition-colors duration-300">
@@ -26,7 +27,7 @@ const BlogPreview = () => {
         </p>
       </div>
 
-      {/* Toggle Button (Read More / Show Less) */}
+      {/* Toggle Button */}
       <div className="mt-10 text-center">
         <button
           onClick={handleToggle}
@@ -36,7 +37,7 @@ const BlogPreview = () => {
         </button>
       </div>
 
-      {/* Details + Team (shown when showDetails = true) */}
+      {/* Expanded Content */}
       {showDetails && (
         <div ref={detailsRef} className="space-y-12 mt-12">
           {/* Image + Story/Mission */}
@@ -50,17 +51,13 @@ const BlogPreview = () => {
             </div>
             <div className="space-y-6 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
-                  🔹 Our Story
-                </h3>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">🔹 Our Story</h3>
                 <p className="leading-relaxed">
                   CoreLedger Services was founded with a vision to simplify tax and compliance for startups, freelancers, and small businesses. With years of industry expertise, we bring clarity, efficiency, and personalized care to each client’s financial journey.
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
-                  🔹 Our Mission
-                </h3>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">🔹 Our Mission</h3>
                 <p className="leading-relaxed">
                   To empower businesses with reliable, accessible, and timely accounting and compliance services — all virtually.
                 </p>
@@ -74,13 +71,11 @@ const BlogPreview = () => {
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex flex-col items-center text-center">
                 <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  src={placeholderImg}
                   alt="Sumit Kumar Dubey"
-                  className="w-24 h-24 rounded-full object-cover mb-4"
+                  className="w-24 h-24 rounded-full object-contain mb-4"
                 />
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Sumit Kumar Dubey
-                </h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Sumit Kumar Dubey</h4>
                 <p className="text-sm text-gray-500 dark:text-gray-400">Founder, Semi Qualified CMA</p>
               </div>
               <p className="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -100,13 +95,11 @@ const BlogPreview = () => {
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex flex-col items-center text-center">
                 <img
-                  src="https://randomuser.me/api/portraits/men/41.jpg"
+                  src={placeholderImg}
                   alt="Altaf Hussain"
-                  className="w-24 h-24 rounded-full object-cover mb-4"
+                  className="w-24 h-24 rounded-full object-contain mb-4"
                 />
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Altaf Hussain
-                </h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Altaf Hussain</h4>
                 <p className="text-sm text-gray-500 dark:text-gray-400">Partner</p>
               </div>
               <p className="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">

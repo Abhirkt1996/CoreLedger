@@ -54,7 +54,7 @@ const ServicesSection = () => {
               href={service.link}
               className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 transition"
             >
-              👉 View Services
+            
             </a>
           </motion.div>
         ))}

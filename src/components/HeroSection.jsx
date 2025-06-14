@@ -12,7 +12,7 @@ const HeroSection = () => {
       </p>
       <div className="mt-6 space-x-4">
         <a
-          href="https://"
+          href="https://forms.gle/voda36vWKc41Ysq47"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition"
